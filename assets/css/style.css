@@ -345,6 +345,9 @@ section {
             gap: 20px;
         }
     }
+    .primary-heading-background {
+        font-size: calc(var(--h2-heading-size) - 10px);
+    }
     .section-illustrations {
         display: flex;
         align-items: center;
@@ -705,12 +708,29 @@ section {
             width: 100%;
         }
     }
+    .piggy-section {
+        .primary-heading-background {
+            font-size: calc(var(--h2-heading-size) - 16px);
+        }
+    }
     
 }
 
 
 @media screen and (max-width: 768px) {
     .third-section {
+        min-height: 677px;
+        span.mb-db {
+            display: block;
+        }
+        .section-heading {
+            font-weight: bold;
+            background-color: var(--secondary-background-color);
+            padding: 10px;
+            max-width: 785px;
+            margin-inline: 0;
+            text-align: center;
+        }
         .cloud-1, .cloud-2, .cloud-3, .cloud-4 {
             position: relative;
             width: 50%;
@@ -749,38 +769,11 @@ section {
             width: 100%;
         }
     }
-    
-}
-
-@media screen and (max-width: 576px) {
-    :root {
-        --h1-heading-size: 42px;
-        --h2-heading-size: 36px;
-        --h3-heading-size: 28px;
-        --h4-heading-size: 22px;
-        --h5-heading-size: 18px;
-        --h6-heading-size: 16px;
-        --small-heading-size: 14px;
-        --text-size: 20px;
-    }
-    .hero-section {
-        background-position: 45% center;
-        .text-wrapper {
-            gap: 30vw;
-        }
-    }
-    .wheelchair-section {
-        padding-block: 50px;
-    }
     .piggy-section {
-        background-color: var(--secondary-extra-light-background-color);
-        text-align: center;
-        padding-block: 85px;
-            /* editted css for mobile */
-        h2.fs-3 {
-            font-size: var(--h3-heading-size);
+        .primary-heading-background {
+            font-size: calc(var(--h2-heading-size) - 22px);
         }
-        .section-illustrations {
+         .section-illustrations {
             flex-direction: column;
             margin-block: 20px;
             gap: 20px;
@@ -805,7 +798,50 @@ section {
         }
         .cloud-illustration-2 img{
             transform: translateY(15px);
-        }    
+        } 
+    }
+    
+}
+
+@media screen and (max-width: 576px) {
+    :root {
+        --h1-heading-size: 32px;
+        --h2-heading-size: 26px;
+        --h3-heading-size: 22px;
+        --h4-heading-size: 18px;
+        --h5-heading-size: 15px;
+        --h6-heading-size: 14px;
+        --small-heading-size: 14px;
+        --text-size: 18px;
+    }
+    span.mb-db {
+        display: block;
+    }
+    .mx-0 {
+        margin-inline: 0px !important
+    }
+    .hero-section {
+        background-position: 45% center;
+        .text-wrapper {
+            gap: 30vw;
+        }
+        
+    }
+    .wheelchair-section {
+        padding-block: 50px;
+    }
+    .piggy-section {
+        background-color: var(--secondary-extra-light-background-color);
+        text-align: center;
+        padding-block: 85px;
+            /* editted css for mobile */
+        h2.fs-3 {
+            font-size: var(--h3-heading-size);
+        }
+          
+        .primary-heading-background {
+            font-size: calc(var(--h2-heading-size) - 0px);
+        }
     }
 
     .third-section {
@@ -816,7 +852,7 @@ section {
         font-family: var(--primary-font);
         display: flex;
         align-items: center;
-        min-height: 677px;
+        
 
         .contents {
             display: flex;
@@ -824,13 +860,7 @@ section {
             gap: 30px;
         }
 
-        .section-heading {
-            font-weight: bold;
-            background-color: var(--secondary-background-color);
-            padding: 10px;
-            max-width: 785px;
-            margin-inline: auto;
-        }
+        
         svg {
             font-weight: bold;
         }
